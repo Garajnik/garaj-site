@@ -1,0 +1,21 @@
+.hello-container {
+  /* background-color: red; */
+  user-select: none;
+
+  position: relative;
+  width: 100%;
+  height: 80vh;
+
+  /* Font Settings */
+  font-family: "Rubik", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+
+  /* Flex Settings */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}

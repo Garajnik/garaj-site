@@ -15,7 +15,44 @@
   -moz-box-shadow: 0px 21px 18px -1px rgba(34, 60, 80, 0.16);
   box-shadow: 0px 21px 18px -1px rgba(34, 60, 80, 0.16);
 }
-.container {
+
+.biglink {
+  text-decoration: none;
+  color: black;
+  /* Positioning */
+  position: relative;
+  translate: 0px -9%;
+  /* Font Settings */
+  font-size: 2rem;
+  font-family: "Pacifico", serif;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.smalllink {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  position: relative; /* Для размещения псевдоэлемента ::after */
+  cursor: pointer;
+}
+
+.smalllink::after {
+  content: ""; /* Создаём псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование относительно текста */
+  left: 0;
+  bottom: 0;
+  width: 0; /* Начальная ширина линии - 0 */
+  height: 2px; /* Высота подчёркивания */
+  background-color: #353535; /* Цвет подчёркивания */
+  transition: width 0.3s ease; /* Анимация ширины */
+}
+
+.smalllink:hover::after {
+  width: 100%; /* Линия растягивается до полной ширины текста при наведении */
+}
+
+nav {
   margin: 20px;
 
   /* Font settings */
@@ -30,38 +67,4 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-}
-
-.header h1 {
-  /* Positioning */
-  position: relative;
-  translate: 0px -9%;
-  /* Font Settings */
-  font-family: "Pacifico", serif;
-  font-weight: 400;
-  font-style: normal;
-  cursor: pointer;
-}
-
-.header a {
-  color: black;
-  text-decoration: none;
-  margin-left: 20px;
-  position: relative; /* Для размещения псевдоэлемента ::after */
-  cursor: pointer;
-}
-
-.header a::after {
-  content: ""; /* Создаём псевдоэлемент */
-  position: absolute; /* Абсолютное позиционирование относительно текста */
-  left: 0;
-  bottom: 0;
-  width: 0; /* Начальная ширина линии - 0 */
-  height: 2px; /* Высота подчёркивания */
-  background-color: #007bff; /* Цвет подчёркивания */
-  transition: width 0.3s ease; /* Анимация ширины */
-}
-
-.header a:hover::after {
-  width: 100%; /* Линия растягивается до полной ширины текста при наведении */
 }
