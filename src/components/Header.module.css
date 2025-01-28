@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 
-.smalllink {
+.smalllinkleft {
   color: black;
   text-decoration: none;
   margin-left: 20px;
@@ -52,7 +52,7 @@
   height: 100%;
 }
 
-.smalllink::after {
+.smalllinkleft::after {
   content: ""; /* Создаём псевдоэлемент */
   position: absolute; /* Абсолютное позиционирование относительно текста */
   right: 0;
@@ -72,7 +72,7 @@
   height: 100%;
 }
 
-.smalllink:hover::after {
+.smalllinkleft:hover::after {
   width: 100%; /* Линия растягивается до полной ширины текста при наведении */
 }
 
@@ -104,6 +104,10 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+}
+
+a {
+  padding: 20px;
 }
