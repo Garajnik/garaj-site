@@ -1,0 +1,42 @@
+.image-container {
+  overflow: hidden; /* Скрывает часть изображения, которая выходит за пределы контейнера */
+  width: 300px; /* Ширина контейнера */
+  height: 300px; /* Высота контейнера */
+  position: relative; /* Для корректного позиционирования */
+  cursor: pointer;
+}
+
+.zoom-image {
+  width: 100%; /* Изображение занимает всю ширину контейнера */
+  height: 100%; /* Изображение занимает всю высоту контейнера */
+  object-fit: cover; /* Сохраняет пропорции изображения */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Плавное увеличение и изменение фильтра */
+}
+
+.overlay-text {
+  position: absolute; /* Позиционирование текста поверх изображения */
+  top: 50%; /* Размещение по вертикали */
+  left: 50%; /* Размещение по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование текста */
+  color: white; /* Цвет текста */
+  font-size: 2rem; /* Размер текста */
+  font-weight: bold; /* Жирный текст */
+  opacity: 0; /* Текст изначально невидим */
+  transition: opacity 0.3s ease; /* Плавное появление текста */
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для текста */
+  padding: 10px; /* Отступы для текста */
+  /* Font settings */
+  font-family: "Rubik", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.image-container:hover .zoom-image {
+  transform: scale(1.2); /* Увеличение изображения на 20% */
+  filter: grayscale(100%) blur(3px); /* Чёрно-белое и размытие */
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1; /* Появление текста при наведении */
+}

@@ -19,3 +19,9 @@
   align-items: center;
   flex-wrap: nowrap;
 }
+
+.hello-container h2 {
+  font-weight: 300;
+  text-align: center;
+  margin: 20px;
+}
