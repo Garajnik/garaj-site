@@ -5,7 +5,7 @@ import styles from "./Desktop.module.css";
 export default function Desktop() {
   return (
     <div className={styles.wallpaper}>
-      <DraggableWindow />
+      <DraggableWindow name={"Slack"}>kek</DraggableWindow>
     </div>
   );
 }

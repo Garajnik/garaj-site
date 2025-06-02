@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Rnd } from "react-rnd";
+import styles from "./DraggableWindow.module.css";
+import ControlButtons from "./ControlButtons";
 
-export default function DraggableWindow() {
+export default function DraggableWindow({ name, children }) {
   const [position, setPosition] = useState({ x: 400, y: 200 });
   const [size, setSize] = useState({ width: 700, height: 500 });
 
@@ -21,14 +23,16 @@ export default function DraggableWindow() {
       }}
       minHeight={300}
       minWidth={500}
+      bounds={"window"}
+      enableResizing
     >
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          background: "lightgreen",
-        }}
-      ></div>
+      <div className={styles.content}>
+        <header className={styles.header}>
+          {name}
+          <ControlButtons />
+        </header>
+        {children}
+      </div>
     </Rnd>
   );
 }
