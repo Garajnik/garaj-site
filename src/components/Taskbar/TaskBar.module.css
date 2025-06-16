@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  bottom: 0;
+  height: 8%;
+  width: calc(100% - 20px);
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.homeContainer {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeContainer * {
+  width: auto;
+  height: 7%;
+}

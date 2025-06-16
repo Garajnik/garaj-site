@@ -7,9 +7,12 @@
   box-shadow: 10px 10px 0px 4px #31322d;
   -webkit-box-shadow: 10px 10px 0px 4px #31322d;
   -moz-box-shadow: 10px 10px 0px 4px #31322d;
+  overflow: hidden;
 }
 
 .header {
+  position: relative;
+  cursor: grab;
   height: 40px;
   border-bottom: #31322d 3px solid;
   display: flex;

@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.imageContainer {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+}
+
+.textContainer {
+  user-select: none;
+  width: min-content;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 70px;
+}
