@@ -1,21 +1,64 @@
-.container {
-  width: 13%;
-  height: 85%;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 10px;
+.task {
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-
-.image {
-  padding-left: 3px;
-  width: auto;
-  height: 90%;
-}
-
-.name {
-  margin-left: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-right: 8px;
+  cursor: pointer;
   user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.task:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 12px;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.closeButton {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  font-size: 10px;
+  padding: 0;
+}
+
+.task:hover .closeButton {
+  opacity: 1;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }

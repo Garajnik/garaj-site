@@ -2,9 +2,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/src/assets/Wallpaper.png");
+  /* background-image: url("/src/assets/Wallpaper.png");
   background-size: cover;
-  background-position: center center;
+  background-position: center center; */
+  background-color: #f2dcc2;
 }
 
 .iconsContainer {

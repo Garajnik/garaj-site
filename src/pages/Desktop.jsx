@@ -1,37 +1,37 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Icon from "../components/Icon/Icon";
 import styles from "./Desktop.module.css";
 import DraggableWindow from "../components/DraggableWindow/DraggableWindow";
-import FileManager from "../windows/FileManager";
 import TaskBar from "../components/Taskbar/TaskBar";
 import Contacts from "../windows/Contacts/Contacts";
+import { useTaskManager } from "../components/Taskbar/Task/useTaskManager";
+import Works from "../windows/Works/Works";
 
 export default function Desktop() {
-  const [computerState, setComputerState] = useState(true);
   const [contactsState, setContactsState] = useState(false);
+  const [workfolderState, setWorkfolderState] = useState(true);
+  const [resumeState, setResumeState] = useState(false);
+  const [consoleState, setConsoleState] = useState(false);
+
+  const { tasks, addTask, removeTask, TaskList } = useTaskManager();
+
+  const taskBarRef = useRef();
 
   return (
     <div className={styles.wallpaper}>
       <div className={styles.iconsContainer}>
         <Icon
-          name="Мой ПК"
-          iconPath="/src/assets/Icons/Computer.svg"
-          func={() => {
-            setComputerState(true);
-          }}
-        />
-        <Icon
-          name="Работа"
+          name="Работы"
           iconPath="/src/assets/Icons/Folder.svg"
           func={() => {
-            setPortfolioState(true);
+            setWorkfolderState(true);
           }}
         />
         <Icon
           name="резюме.pdf"
           iconPath="/src/assets/Icons/Document.svg"
           func={() => {
-            setAboutState(true);
+            setResumeState(true);
           }}
         />
         <Icon
@@ -49,14 +49,6 @@ export default function Desktop() {
           }}
         />
       </div>
-      {computerState && (
-        <DraggableWindow
-          name={"Этот компьютер"}
-          closeFunc={() => setComputerState(false)}
-        >
-          <FileManager></FileManager>
-        </DraggableWindow>
-      )}
       {contactsState && (
         <DraggableWindow
           name={"Контакты"}
@@ -65,7 +57,33 @@ export default function Desktop() {
           <Contacts></Contacts>
         </DraggableWindow>
       )}
-      <TaskBar></TaskBar>
+      {workfolderState && (
+        <DraggableWindow
+          name={"Работы"}
+          closeFunc={() => setWorkfolderState(false)}
+        >
+          <Works />
+        </DraggableWindow>
+      )}
+      {resumeState && (
+        <DraggableWindow
+          name={"Резюме"}
+          closeFunc={() => setResumeState(false)}
+        >
+          <Contacts></Contacts>
+        </DraggableWindow>
+      )}
+      {consoleState && (
+        <DraggableWindow
+          name={"Консоль"}
+          closeFunc={() => setConsoleState(false)}
+        >
+          <Contacts></Contacts>
+        </DraggableWindow>
+      )}
+      <TaskBar ref={taskBarRef}>
+        <TaskList />
+      </TaskBar>
     </div>
   );
 }
