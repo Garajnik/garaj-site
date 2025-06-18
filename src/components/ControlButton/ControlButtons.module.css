@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  display: flex;
+  right: 0;
+  width: max-content;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hide {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  user-select: none;
+  margin-right: 3px;
+}
+
+.maximize {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  user-select: none;
+  margin-right: 3px;
+}
+
+.close {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  user-select: none;
+  margin-right: 8px;
+}

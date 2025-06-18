@@ -1,0 +1,19 @@
+.taskBar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.taskContainer {
+  display: flex;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 5px;
+}

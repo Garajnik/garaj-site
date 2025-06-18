@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2_copy_7" data-name="Layer 2 copy 7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.08 120.38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-1" x1="26.51" y1="73.59" x2="26.51" y2="103.18"/>
+    <line class="cls-1" x1="41.31" y1="88.38" x2="11.71" y2="88.38"/>
+  </g>
+  <path class="cls-1" d="M26.51,57.22v-25.13c0-2.58,2.09-4.68,4.68-4.68h37.21c2.75,0,5.43-.89,7.63-2.53l11.47-8.54c1.62-1.21,3.59-1.86,5.61-1.86h9.31c2.35,0,4.26,1.91,4.26,4.26v64.02c0,3.11-2.52,5.63-5.63,5.63h-43.39"/>
+</svg>

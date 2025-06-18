@@ -1,0 +1,38 @@
+.container {
+  width: 270px;
+  border-right: #31322d 3px solid;
+  padding: 20px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.link img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+directory {
+  margin: 5px 0;
+}
+
+.directory > div:first-child {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.directory > div:first-child img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.children {
+  margin-left: 20px;
+}
