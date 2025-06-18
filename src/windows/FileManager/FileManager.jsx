@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import styles from "./FileManager.module.css";
+import MinusIcon from "../../assets/Icons/Minus.svg";
+import PlusIcon from "../../assets/Icons/Plus.svg";
 
 function LinkComponent({ node, onClick }) {
   return (
@@ -17,14 +19,7 @@ function DirectoryComponent({ node, onFileSelect }) {
   return (
     <div className={styles.directory}>
       <div onClick={() => setIsExpanded(!isExpanded)}>
-        <img
-          src={
-            isExpanded
-              ? "/src/assets/Icons/Minus.svg"
-              : "/src/assets/Icons/Plus.svg"
-          }
-          alt=""
-        />
+        <img src={isExpanded ? { MinusIcon } : { PlusIcon }} alt="" />
         <span>{node.name}</span>
       </div>
       <AnimatePresence>

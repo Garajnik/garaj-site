@@ -9,28 +9,32 @@ import Clock from "../components/Clock/Clock";
 import TaskBar from "../components/Taskbar/TaskBar";
 import Console from "../windows/Console/Console";
 import Resume from "../windows/ResumeViewer/Resume";
+import FolderIcon from "../assets/Icons/Folder.svg";
+import DocumentIcon from "../assets/Icons/Document.svg";
+import ConsoleIcon from "../assets/Icons/Console.svg";
+import MailIcon from "../assets/Icons/Mail.svg";
 
 const WINDOW_OFFSET = 30;
 
 const icons = [
   {
     name: "Работы",
-    iconPath: "/src/assets/Icons/Folder.svg",
+    iconPath: { FolderIcon },
     windowId: "works",
   },
   {
     name: "резюме.pdf",
-    iconPath: "/src/assets/Icons/Document.svg",
+    iconPath: { DocumentIcon },
     windowId: "resume",
   },
   {
     name: "Консоль",
-    iconPath: "/src/assets/Icons/Console.svg",
+    iconPath: { ConsoleIcon },
     windowId: "console",
   },
   {
     name: "Контакты",
-    iconPath: "/src/assets/Icons/Mail.png",
+    iconPath: { MailIcon },
     windowId: "contacts",
   },
 ];
