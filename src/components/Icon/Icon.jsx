@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { motion } from "framer-motion"; // Импорт motion
+import { motion } from "motion/react"; // Импорт motion
 import styles from "./Icon.module.css";
 
 export default function Icon({ iconPath, name, func }) {
@@ -38,7 +38,12 @@ export default function Icon({ iconPath, name, func }) {
       animate={{ scale: 1 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
-      <img className={styles.imageContainer} src={iconPath} alt={name} />
+      <img
+        draggable={false}
+        className={styles.imageContainer}
+        src={iconPath}
+        alt={name}
+      />
       <div className={styles.textContainer}>{name}</div>
     </motion.div>
   );

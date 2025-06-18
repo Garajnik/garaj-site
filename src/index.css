@@ -8,6 +8,8 @@
   font-weight: 700;
   font-style: bold;
   font-variation-settings: "wdth" 100;
+
+  user-select: none;
 }
 
 #root {

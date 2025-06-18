@@ -28,8 +28,8 @@
 
 .close {
   cursor: pointer;
-  width: 27px;
-  height: 27px;
+  width: 24px;
+  height: 24px;
   user-select: none;
   margin-right: 8px;
 }

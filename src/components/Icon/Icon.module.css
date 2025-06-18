@@ -14,6 +14,7 @@
   height: 5em;
   /* Гарантируем, что изображение не сжимается */
   flex-shrink: 0;
+  user-select: none;
 }
 
 .textContainer {
