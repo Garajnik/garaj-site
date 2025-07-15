@@ -6,7 +6,7 @@ export default function ContactsPage() {
     <div>
       <Header />
       <div className={styles.contactsContainer}>
-        <h1>Feel free to contact me on:</h1>
+        <h1>Contact me with:</h1>
         <ul>
           <li>Email: <a href="email:lexan1699@gmail.com">lexan1699@gmail.com</a></li>
         </ul>
